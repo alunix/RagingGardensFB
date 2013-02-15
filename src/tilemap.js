@@ -28,7 +28,7 @@ Crafty.c("Layer2Tile", {
     }
 });
  
-Tilemap = ActorObject.extend({
+Tilemap = Backbone.Model.extend({
     defaults: {
         // pixel size
         'pxWidth' : _Globals.conf.get('screen-width'),

@@ -99,7 +99,7 @@ Crafty.c('Enemy', {
 /**
  * Creates and handles all Enemy actions and attributes
  */
-Enemy = ActorObject.extend({
+Enemy = Backbone.Model.extend({
     defaults: {
         // references
         'tileMap': undefined,
@@ -416,7 +416,5 @@ Enemy = ActorObject.extend({
             [2, 48]
         );
         
-        // bind to object
-        model.set({'entity' : entity });
     }
 });

@@ -52,7 +52,7 @@ Crafty.c('Dude', {
 /**
  * Creates and handles all Player properties and actions - appearance, movement, score.
  */
-Player = ActorObject.extend({
+Player = Backbone.Model.extend({
     defaults: {
         // references
         'tileMap': undefined,
@@ -372,8 +372,6 @@ Player = ActorObject.extend({
             [8, 48]
         );
         
-        // bind to object
-    	model.set({'entity' : entity });
     },
     // substract carrots for magic 
     // (Returns: True|False)
