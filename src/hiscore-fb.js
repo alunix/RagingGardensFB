@@ -104,7 +104,7 @@ Crafty.bind("ShowSaveHiscore", function(score) {
         buttons: {
             "Yes": function() {
             	var hiscore = new Hiscore();
-                hiscore.save(Globals['player'].id, score, function(success) {
+                hiscore.save(_Globals['player'].id, score, function(success) {
                     if (success) {
                         Crafty.trigger('ShowHiscore', {text: undefined, refresh: true});
                     } else {
