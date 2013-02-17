@@ -47,7 +47,7 @@ body, html {
     position: absolute;
     width: 768px;
     left: 128px;
-    top: 566px;
+    top: 668px;
     z-index:3;
 }
 #menu>div {
@@ -90,16 +90,26 @@ body, html {
     width: 100%;
     /*display: table-row;*/
 }
+#dialog-score>div.border {
+	border-bottom: 1px solid white;
+}
 #dialog-score>div>span {
     padding-bottom: 5px;
     display: table-cell;
 }
 #dialog-score>div>span.name {
     width: 300px;
+    vertical-align: bottom;
 }
 #dialog-score>div>span.score {
-    /*width: 250px;*/
+    width: 50px;
     text-align: right;
+}
+#dialog-score>div>span.pic {
+	/*border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	*/
+	padding-left: 50px;
 }
 #dialog-score>div>span.u {
     text-decoration: underline;

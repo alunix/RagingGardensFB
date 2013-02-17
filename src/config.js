@@ -38,7 +38,7 @@ Config = Backbone.Model.extend({
         'music_vol': 0.3,
         
         // gameplay
-        'gameTimeLimit': 180 * 1000, // 5 mins
+        'gameTimeLimit': 5 * 1000, // 3 mins
         'gameTurnPeriod': 30 * 1000, // every 30 seconds
         'gameTickPeriod': 1 * 1000, 
         
@@ -58,7 +58,7 @@ Config = Backbone.Model.extend({
         'defaultCarrots': 0,
         'carrotsCollect': 2,
         'carrotsPushCost': 1,
-        'carrotsForkCost': 2,        
+        'carrotsForkCost': 2,    
     },
     initialize: function() {
         var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
@@ -70,4 +70,18 @@ Config = Backbone.Model.extend({
             console.log("Using %s rendering ...", this.get('renderType'));
         }
     },
+    getAppId: function() {
+    	if (_Globals['env'] === 'prod') {
+    		return '166937546788336';
+    	} else {
+    		return '421628817922803';
+    	}
+    },
+    getHostname: function() {
+    	if (_Globals['env'] === 'prod') {
+    		return 'https://raging-gardens-fb.herokuapp.com/';
+    	} else {
+    		return 'http://raging-gardens-fb.com';
+    	}    	
+    }
 });

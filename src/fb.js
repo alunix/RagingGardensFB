@@ -1,18 +1,18 @@
-define(function() {
+define(['src/config.js'], function() {
+	var cfg = new Config({});
     return {
         load : function(name, req, onLoad, config) {
             
             window.fbAsyncInit = function() {
                 // init the FB JS SDK
                 FB.init({
-                  appId      : '421628817922803', // App ID from the App Dashboard
-                  channelUrl : 'http://raging-gardens-fb.com' + '/channel.html', //WWW.YOUR_DOMAIN.COM/channel.html', // Channel File for x-domain communication
+                  appId      : cfg.getAppId(),
+                  channelUrl : cfg.getHostname() + '/channel.html',
                   status     : true, // check the login status upon init?
                   cookie     : true, // set sessions cookies to allow your server to access the session?
                   xfbml      : false  // parse XFBML tags on this page?
                 });
                 
-                // Additional initialization code such as adding Event Listeners goes here
                 onLoad(FB);
             };
             
@@ -26,5 +26,4 @@ define(function() {
         
         }
     };
-
 });

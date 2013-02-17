@@ -21,23 +21,41 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 'use strict';
- 
 $(document).ready(function() {
     require(["src/fb!", "src/config.js"], function(FB) {
+        
+        /**
+         * Global Registry
+         */
+        _Globals['conf'] = new Config({});
         
         /**
          * Load FB API
          */
     	FB.getLoginStatus(function(response) {
     		  if (response.status === 'connected') {
-    			  
 				FB.api('/me', function(response) {
-					console.log(response);
-				  console.log('Your name is ' + response.username);
+					var player = {
+							id: response.id,
+							name: response.name,
+							score: 0, // default
+					};
+					_Globals['player'] = player;
+					
+					// get score for this player
+					FB.api('/' + response.id + '/scores', function(response) {
+						for(var i = 0; i < response.data.length; i++) {
+							var item = response.data[i];
+							if (item.application.id === _Globals['conf'].getAppId()) {
+								player.score = item.score;
+								break;
+							} 
+						}
+						// save with fetched score
+						_Globals['player'] = player;
+					});
 				});    	
-    		    	
     		  } else { // if (response.status === 'not_authorized') { 
     		    // not_authorized or not_logged_in
 			    FB.login(function(response) {
@@ -50,17 +68,8 @@ $(document).ready(function() {
     		  }
     	});    	
     	
-        /**
-         * Global Registry
-         */
-        _Globals['conf'] = new Config({});
-        
-
         $("#stats").hide();
 
-        var hiscore = new Hiscore();
-        hiscore.open();
-        
         /**
          * Init Crafty Engine
          */
