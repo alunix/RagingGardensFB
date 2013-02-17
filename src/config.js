@@ -25,14 +25,14 @@ Config = Backbone.Model.extend({
     defaults: {
         // engine 
         'trace' : false,
-        'debug' : false,
+        'debug' : true,
         'showfps': false,
         'renderType' : 'DOM', // default - faster under FF & Safari
-        'screen-width' : 1024,
-        'screen-height' : 768,
+        'screen-width' : 800,
+        'screen-height' : 600,
         
         // media
-        'sfx': true,
+        'sfx': false,
         'sfx_vol': 0.4,
         'music': true,
         'music_vol': 0.3,

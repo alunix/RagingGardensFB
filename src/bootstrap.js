@@ -21,8 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
+'use strict';
+ 
 $(document).ready(function() {
-    require(["src/config.js", "src/actor_object.js"], function() {
+    require(["src/fb!", "src/config.js"], function() {
+        
+        /**
+         * Load FB API
+         */
         
         /**
          * Global Registry
@@ -55,16 +62,16 @@ $(document).ready(function() {
                 "art/stuz_forkit.png",
                 "art/stuz_splash.png",
                 // sfx
-                "sfx/fart1.ogg",
-                "sfx/fart2.ogg",
-                "sfx/pull.ogg",
-                "sfx/scream1.ogg",
-                "sfx/scream2.ogg",
-                "sfx/aaaah.ogg",
-                "sfx/laughter01.ogg",
-                "sfx/laughter02.ogg",
-                "sfx/burp.ogg",
-                "sfx/trouble_in_the_garden_lowq.ogg",
+//                "sfx/fart1.ogg",
+//                "sfx/fart2.ogg",
+//                "sfx/pull.ogg",
+//                "sfx/scream1.ogg",
+//                "sfx/scream2.ogg",
+//                "sfx/aaaah.ogg",
+//                "sfx/laughter01.ogg",
+//                "sfx/laughter02.ogg",
+//                "sfx/burp.ogg",
+//                "sfx/trouble_in_the_garden_lowq.ogg",
                 ], 
             function() {
         	    
@@ -97,18 +104,18 @@ $(document).ready(function() {
                     splash: [0, 0],
                 });                
                 // --- Audio
-                Crafty.audio.add({
-                    fart1: ["sfx/fart1.ogg"],
-                    fart2: ["sfx/fart2.ogg"],
-                    pull: ["sfx/pull.ogg"],
-                    scream1: ["sfx/scream1.ogg"],
-                    scream2: ["sfx/scream2.ogg"],
-                    aaaah: ["sfx/aaaah.ogg"],
-                    laughter1: ["sfx/laughter01.ogg"],
-                    laughter2: ["sfx/laughter02.ogg"],
-                    burp: ["sfx/burp.ogg"],
-                    music: ["sfx/trouble_in_the_garden_lowq.ogg"],
-                });                
+//                Crafty.audio.add({
+//                    fart1: ["sfx/fart1.ogg"],
+//                    fart2: ["sfx/fart2.ogg"],
+//                    pull: ["sfx/pull.ogg"],
+//                    scream1: ["sfx/scream1.ogg"],
+//                    scream2: ["sfx/scream2.ogg"],
+//                    aaaah: ["sfx/aaaah.ogg"],
+//                    laughter1: ["sfx/laughter01.ogg"],
+//                    laughter2: ["sfx/laughter02.ogg"],
+//                    burp: ["sfx/burp.ogg"],
+//                    music: ["sfx/trouble_in_the_garden_lowq.ogg"],
+//                });                
                 
     		    Crafty.scene(_Globals['scene']);
                 
@@ -139,7 +146,6 @@ $(document).ready(function() {
          * Load required scenes and game data
          */           
     	require([
-            "src/actor_object.js",
             "src/tilemap.js",
             "src/player.js",
             "src/enemy.js",
