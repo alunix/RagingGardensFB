@@ -25,12 +25,31 @@
 'use strict';
  
 $(document).ready(function() {
-    require(["src/fb!", "src/config.js"], function() {
+    require(["src/fb!", "src/config.js"], function(FB) {
         
         /**
          * Load FB API
          */
-        
+    	FB.getLoginStatus(function(response) {
+    		  if (response.status === 'connected') {
+    			  
+				FB.api('/me', function(response) {
+					console.log(response);
+				  console.log('Your name is ' + response.username);
+				});    	
+    		    	
+    		  } else { // if (response.status === 'not_authorized') { 
+    		    // not_authorized or not_logged_in
+			    FB.login(function(response) {
+			        if (response.authResponse) {
+			            // connected
+			        } else {
+			            // cancelled
+			        }
+			    });
+    		  }
+    	});    	
+    	
         /**
          * Global Registry
          */
