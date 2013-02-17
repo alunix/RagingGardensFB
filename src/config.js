@@ -79,7 +79,7 @@ Config = Backbone.Model.extend({
     },
     getHostname: function() {
     	if (_Globals['env'] === 'prod') {
-    		return 'https://raging-gardens-fb.herokuapp.com/';
+    		return 'http://raging-gardens-fb.herokuapp.com/';
     	} else {
     		return 'http://raging-gardens-fb.com';
     	}    	
