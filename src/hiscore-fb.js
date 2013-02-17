@@ -39,7 +39,6 @@ Hiscore = Backbone.Model.extend({
     // save score for given person directly to DB
     save: function(id, score, fnCallback) {
 		FB.api('/' + id + '/scores', 'post', { 'score': score }, function(response) {
-			console.log(response);
 			if (response.error) {
                 // score listing failed because of response.ErrorCode
                 if (_Globals.conf.get('debug')) {
@@ -172,7 +171,8 @@ Crafty.bind("ShowHiscore", function(params) {
                         $("#dialog-score").append(text);
                         
                         // load pic ...whenever
-                		FB.api(obj.uid + '?fields=picture.type(normal)', function(response) {
+                		FB.api(obj.uid + '?fields=picture.type(small)', function(response) {
+                			console.log('setting ' + i);
                 			console.log(response);
                 			if (!response.error) {
                 				// OK!
