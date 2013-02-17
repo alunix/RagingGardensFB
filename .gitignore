@@ -2,4 +2,6 @@
 .c9*/*
 test-scores.html
 
-
+# Eclipse
+.project
+.settings/*
