@@ -165,18 +165,19 @@ Crafty.bind("ShowHiscore", function(params) {
                         text += '<span class="score">';
                         text += obj.score;
                         text += '</span>';
-                        text += '<span class="pic" id="pic_' + i + '"></span>';
+                        var tagid = 'pic_' + i;
+                        text += '<span class="pic" id="' + tagid + '"></span>';
                         text += '</div>';
                         
                         $("#dialog-score").append(text);
                         
                         // load pic ...whenever
                 		FB.api(obj.uid + '?fields=picture.type(small)', function(response) {
-                			console.log('setting ' + i);
+                			console.log('setting tag' + tagid);
                 			console.log(response);
                 			if (!response.error) {
                 				// OK!
-                				$('#pic_' + i).html('<img src="' + response.picture.data.url + '" />');
+                				$('#' + tagid).html('<img src="' + response.picture.data.url + '" />');
                 			}
                 		});                        
                         
