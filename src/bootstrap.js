@@ -60,11 +60,14 @@ $(document).ready(function() {
     		    // not_authorized or not_logged_in
 			    FB.login(function(response) {
 			        if (response.authResponse) {
-			            // connected
+	                    // TODO: Cheap! :( Must replace with proper restart.
+	                    window.location.reload(true);
 			        } else {
-			            // cancelled
+			            // TODO: cancelled
+			        	window.history.back();
 			        }
-			    });
+			    },
+			    { scope:'publish_actions' });
     		  }
     	});    	
     	
