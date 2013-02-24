@@ -61,7 +61,7 @@ $(document).ready(function() {
 			    FB.login(function(response) {
 			        if (response.authResponse) {
 	                    // TODO: Cheap! :( Must replace with proper restart.
-	                    window.location.reload(true);
+			        	window.location.href = window.location.href;
 			        } else {
 			            // TODO: cancelled
 			        	window.history.back();

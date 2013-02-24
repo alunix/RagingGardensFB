@@ -198,7 +198,7 @@ Crafty.bind("ShowHiscore", function(params) {
             "Let me out!": function() {
                 if (params.refresh) {
                     // TODO: Cheap! :( Must replace with proper restart.
-                    window.location.reload();
+                	window.location.href = window.location.href;
                 }                
                 $(this).dialog("close");
             }
