@@ -7,7 +7,7 @@ define(['src/config.js'], function() {
                 // init the FB JS SDK
                 FB.init({
                   appId      : cfg.getAppId(),
-                  channelUrl : cfg.getHostname() + '/channel.html',
+                  channelUrl : cfg.getHostname() + '/channel.php',
                   status     : true, // check the login status upon init?
                   cookie     : true, // set sessions cookies to allow your server to access the session?
                   xfbml      : false  // parse XFBML tags on this page?
