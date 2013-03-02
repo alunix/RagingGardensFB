@@ -46,21 +46,25 @@ body, html {
 #menu {
     position: absolute;
     width: 768px;
-    left: 128px;
-    top: 668px;
-    z-index:3;
+    left: 168px;
+    top: 648px;
+    z-index: 3;
 }
 #menu>div {
+	background-image: url('../art/btn.png');
+	width: 160px;
+	height: 54px;
     position: absolute;
     font-size: 18px;
+    text-align: center;
+    line-height: 50px;
     color: white;
     text-shadow: 1px 1px green;    
     display: inline;
     cursor: pointer;
 }
 #menu>div:hover {
-    color: #121212;
-    text-shadow: 1px 1px green; 
+	background-image: url('../art/btn_hover.png');
 }
 #dialog-howto>h1 {
     font-size: 20px;
