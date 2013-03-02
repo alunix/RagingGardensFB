@@ -25,20 +25,20 @@ Config = Backbone.Model.extend({
     defaults: {
         // engine 
         'trace' : false,
-        'debug' : true,
+        'debug' : false,
         'showfps': false,
         'renderType' : 'DOM', // default - faster under FF & Safari
         'screen-width' : 1024,
         'screen-height' : 768,
         
         // media
-        'sfx': false,
+        'sfx': true,
         'sfx_vol': 0.4,
         'music': true,
         'music_vol': 0.3,
         
         // gameplay
-        'gameTimeLimit': 15 * 1000, // 3 mins
+        'gameTimeLimit': 180 * 1000, // 3 mins
         'gameTurnPeriod': 30 * 1000, // every 30 seconds
         'gameTickPeriod': 1 * 1000, 
         
