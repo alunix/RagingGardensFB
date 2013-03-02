@@ -49,7 +49,7 @@
     These are slightly unorthodox. Simply uhm ... fart to <span class="keys">push</span> your opponents away or use a 
     <span class="keys">Carrot-on-a-Fork</span> totem decoy to deceive them. The totem is spawned on your current position.
     </p>
-    <h1>Goal & Controls</h1>
+    <h1>Goals &amp; Controls</h1>
     <p>Collect as many carrots as possible in 3 minutes. Use the controls to move and repel opponents.</p>
     <ul>
         <li><span class="keys">Arrow keys</span> - Move your ninja rabbit on the map.</li>
