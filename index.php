@@ -28,9 +28,12 @@
     <script type="text/javascript" src="lib/require.js"></script>
     <!-- game -->
     <?php $timevar = time(); ?>
-    <script type="text/javascript" src="src/bootstrap.js?ver=<?php echo $timevar; ?>"></script>
-    <script type="text/javascript" src="src/hiscore-fb.js?ver=<?php echo $timevar; ?>"></script>
+    <script type="text/javascript" src="src/bootstrap.js?v=<?php echo $timevar; ?>"></script>
+    <script type="text/javascript" src="src/hiscore-fb.js?v=<?php echo $timevar; ?>"></script>
     <script type="text/javascript">
+    require.config({
+        urlArgs: "bust=v<?php echo $timevar; ?>"
+    });    
     _Globals = {
         env : 'dev', // 'prod'
         version : '1.0.8',
