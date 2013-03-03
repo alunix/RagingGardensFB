@@ -83,7 +83,7 @@
             </div>
             <div id="menu" style="display: none;">
                 <div id="menu-start" class="button" style="left: 76px">Play Game</div>
-                <div id="menu-howto" class="button" style="left: 248px">How to Play</div>
+                <div id="menu-howto" class="button" style="left: 258px">How to Play</div>
                 <div id="menu-hiscore" class="button" style="left: 438px">Hiscores</div>
             </div>
         </div>
