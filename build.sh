@@ -30,7 +30,7 @@ cp css/ $BUILD -R
 cp lib/ $BUILD -R
 cp sfx/ $BUILD -R
 cp src/ $BUILD -R
-cp channel.php favicon.ico HISTORY index.php LICENSE README.md $BUILD
+cp channel.php favicon.ico HISTORY index.php LICENSE README.md .htaccess $BUILD
 
 ### Obfuscate javascript
 cd $BUILD/css
