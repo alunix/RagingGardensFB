@@ -5,3 +5,6 @@ test-scores.html
 # Eclipse
 .project
 .settings/*
+
+# Build
+build/*
