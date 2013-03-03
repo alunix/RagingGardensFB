@@ -34,7 +34,7 @@
         urlArgs: "bust=v<?php echo $timevar; ?>"
     });    
     _Globals = {
-        env : 'dev', // 'prod'
+        env : 'dev',
         version : '1.0.8',
         scene : 'splash'
         };

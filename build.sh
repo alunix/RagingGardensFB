@@ -39,11 +39,10 @@ rm style.css
 cd $BUILD/src
 java -jar $YUI  -o '.js$:.js' *.js
 
+### Production
 cd $BUILD
 sed -i 's/style.css/style.min.css/g' index.php
-
-### Cleanup
-sed -i 's/style.css/style.css.min/g' index.php
+sed -i 's/dev/prod/g' index.php
 
 
 echo "Build completed."
